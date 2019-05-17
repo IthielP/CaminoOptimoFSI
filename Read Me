@@ -1,0 +1,60 @@
+En esta práctica se busca demostrar el efecto de como en ramificación y acotación con subestimación adherir la heurística al coste
+del camino hace que aún siguiendo el mismo camino que en el método de ramificación y acotación simple lleguemos en menor tiempo
+al destino. 
+
+Para ello cabe destacar que a la hora de añadir elementos a la lista abierta debemos añadir los nodos expandidos y luego 
+una vez añadidos ordenar la lista pues disponemos en ese momento de toda la información de costes heuristicos y de camino para
+realizar una ordenación eficaz y adecuada. Por otro lado debemos comentar que se implementa una lista cerrada para evitar recorrer
+en bucle ciudades ya visitadas. 
+
+Se adjunta resultado de las pruebas:
+
+Prueba 1 de A a B
+Coste del camino: 16
+Breadth_First: [<Node B>, <Node F>, <Node S>, <Node A>]
+Coste del camino: 10
+Depth_First:  [<Node B>, <Node P>, <Node C>, <Node D>, <Node M>, <Node L>, <Node T>, <Node A>]
+Coste del camino: 24
+Recorrido y profundidad:  [<Node B>, <Node P>, <Node R>, <Node S>, <Node A>]
+Coste del camino: 6
+Recorrido y profundidad con subestimación:  [<Node B>, <Node P>, <Node R>, <Node S>, <Node A>]
+
+Prueba 2 de I a B
+Coste del camino: 8
+Breadth_First: [<Node B>, <Node U>, <Node V>, <Node I>]
+Coste del camino: 10
+Depth_First:  [<Node B>, <Node U>, <Node V>, <Node I>]
+Coste del camino: 7
+Recorrido y profundidad:  [<Node B>, <Node U>, <Node V>, <Node I>]
+Coste del camino: 5
+Recorrido y profundidad con subestimación:  [<Node B>, <Node U>, <Node V>, <Node I>]
+
+Prueba 3 de C a B
+Coste del camino: 11
+Breadth_First: [<Node B>, <Node P>, <Node C>]
+Coste del camino: 4
+Depth_First:  [<Node B>, <Node P>, <Node C>]
+Coste del camino: 8
+Recorrido y profundidad:  [<Node B>, <Node P>, <Node C>]
+Coste del camino: 3
+Recorrido y profundidad con subestimación:  [<Node B>, <Node P>, <Node C>]
+
+Prueba 4 de U a B
+Coste del camino: 3
+Breadth_First: [<Node B>, <Node U>]
+Coste del camino: 6
+Depth_First:  [<Node B>, <Node U>]
+Coste del camino: 2
+Recorrido y profundidad:  [<Node B>, <Node U>]
+Coste del camino: 2
+Recorrido y profundidad con subestimación:  [<Node B>, <Node U>]
+
+Prueba 5 de E a F
+Coste del camino: 13
+Breadth_First: [<Node F>, <Node B>, <Node U>, <Node H>, <Node E>]
+Coste del camino: 7
+Depth_First:  [<Node F>, <Node B>, <Node U>, <Node H>, <Node E>]
+Coste del camino: 16
+Recorrido y profundidad:  [<Node F>, <Node B>, <Node U>, <Node H>, <Node E>]
+Coste del camino: 7
+Recorrido y profundidad con subestimación:  [<Node F>, <Node B>, <Node U>, <Node H>, <Node E>]
